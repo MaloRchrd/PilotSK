@@ -5,11 +5,12 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "scheme": "myapp",
+    "scheme": "psk",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "cover"
+      "image": "./assets/splash-psk.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#FFCB00"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -18,7 +19,7 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false
     },
     "android": {
       "permissions": [],

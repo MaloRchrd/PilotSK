@@ -93,6 +93,12 @@ export const SettingScreen = ({ navigation }) => {
       setSaveString("SAVED");
     }, 1000);
   };
+
+  const testConnexion = async () => {
+    setTestString("Testing connexion...");
+    setTestString("Connexion valid...");
+  };
+
   const themeContext = React.useContext(ThemeContext);
   const renderLeftActions = () => (
     <React.Fragment>
@@ -201,6 +207,14 @@ export const SettingScreen = ({ navigation }) => {
               captionIcon={AlertIcon}
               onChangeText={(nextValue) => setIpAddress(nextValue)}
             />
+            {/* <Button
+              status="basic"
+              appearance="outline"
+              disabled="true"
+              onPress={() => testConnexion()}
+            >
+              {testString}
+            </Button> */}
             <Text
               style={{ paddingBottom: 10, paddingTop: 10 }}
               category="h5"

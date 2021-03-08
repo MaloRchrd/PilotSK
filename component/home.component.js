@@ -92,6 +92,7 @@ export const HomeScreen = ({ navigation }) => {
     ipAddress = valueJson.ipAddress;
     baseUrl = `http${ssl ? "s" : ""}://${ipAddress}/signalk/v1`;
     let baseWsUrl = `ws://${ipAddress}/signalk/v1`;
+    console.log(baseUrl);
     console.log("renders");
     // setReload(reload + 1);
     // console.log(reload);
@@ -382,14 +383,14 @@ export const HomeScreen = ({ navigation }) => {
     return (
       <>
         {wind ? (
-          <ButtonGroup status="secondary">
+          <ButtonGroup status="primary">
             <Button onPress={() => SetState("auto")}>AUTO</Button>
             <Button onPress={() => SetState("wind")}>WIND</Button>
             <Button onPress={() => SetState("route")}>TRACK</Button>
             <Button onPress={() => SetState("standby")}>STANDBY</Button>
           </ButtonGroup>
         ) : (
-          <ButtonGroup status="secondary">
+          <ButtonGroup status="primary">
             <Button onPress={() => SetState("auto")}>AUTO</Button>
             <Button onPress={() => SetState("route")}>TRACK</Button>
             <Button onPress={() => SetState("standby")}>STANDBY</Button>
